@@ -131,27 +131,3 @@ Ce projet a été réalisé en Python dans un environnement Jupyter Notebook, en
 * **Matplotlib & Seaborn** : bibliothèques de visualisation utilisées à des fins exploratoires (par exemple, tentative d'afficher la matrice des features normalisées via un *heatmap*, histogrammes de distribution, etc.). Elles permettent de mieux comprendre les données et auraient pu servir à visualiser les performances (ex: courbes ROC, importances des features pour la Random Forest, etc.).
 
 L'utilisation conjointe de ces outils a permis de construire un pipeline de machine learning complet, de l'analyse initiale du jeu de données jusqu'à l'évaluation finale des algorithmes de classification.
-
-## Structure recommandée du dépôt GitHub
-
-Pour organiser le code, les données et les résultats de ce projet de manière claire, on peut adopter une structure de répertoire standard comme suit :
-
-* **README.md** : Le fichier README contenant la présentation du projet (contexte, données, méthodes, résultats, etc.) – vous lisez ce document actuellement.
-* **data/** : Ce répertoire contiendrait les données brutes et dérivées du projet. Par exemple :
-
-  * `data/raw/` : les données brutes d'origine (ex : *Dataset\_project\_RS.csv* et *Dataset\_project\_RS\_random.csv* si leur diffusion est possible, ou sinon un script pour les télécharger depuis une source publique).
-  * `data/processed/` : les données pré-traitées, prêtes pour l'analyse (par ex. un fichier CSV ou un fichier compressé pickle contenant le DataFrame après nettoyage, encodage et feature selection).
-* **notebooks/** : Les notebooks Jupyter utilisés durant le projet. Par exemple, `notebooks/intrusiondetection2.ipynb` contenant tout le code et les analyses effectués. On peut également avoir d'autres notebooks pour des explorations spécifiques ou des essais de modélisation.
-* **src/** : Le code source du projet sous forme de scripts ou de modules Python réutilisables.
-  *(On pourrait y structurer le code en sous-modules, par ex. `src/data_preprocessing.py` (fonctions de nettoyage et de préparation des données), `src/models.py` (définition d'une classe ou fonctions pour instancier et entraîner les modèles), `src/evaluate.py` (fonctions de calcul des métriques et tracé des courbes), etc. Cela permettrait de réutiliser le code du notebook dans un contexte de production ou d'automatisation, par exemple un script d'entraînement.)*
-* **results/** : Ce dossier pourrait contenir les résultats générés par le projet :
-
-  * `results/model_performance.csv` ou `.xlsx` : un tableau récapitulatif des métriques de performance des différents modèles entraînés.
-  * `results/confusion_matrices/` : d'éventuelles figures (images .png) de matrices de confusion pour chaque modèle.
-  * `results/feature_importance/` : par exemple, une figure des importances de features tirées de la Random Forest ou du Gradient Boosting.
-  * *(Tout autre artefact — rapports, graphiques — issu de l'évaluation.)*
-* **models/** (optionnel) : Si l'on souhaite sauvegarder les modèles entraînés (fichiers `.joblib` ou `.pkl` des objets sklearn entraînés) pour une utilisation ultérieure sans avoir à les réentraîner.
-* **docs/** (optionnel) : Documentation additionnelle, par exemple une description plus technique, ou des notes d'utilisation.
-* **requirements.txt** : Un fichier listant les dépendances Python nécessaires (versions de pandas, scikit-learn, etc.), pour permettre à d'autres utilisateurs de recréer facilement l'environnement pour exécuter le code.
-
-En structurant le dépôt de cette manière, on facilite la navigation et la collaboration. Les données sensibles ou volumineuses peuvent être ignorées du contrôle de version (via `.gitignore`), surtout si le dataset est trop gros pour GitHub – il est alors préférable de fournir un script de téléchargement ou un lien vers le dataset public. L'important est de séparer clairement le code, les données et les résultats, et de fournir ce README en guise de guide pour comprendre et reproduire le projet.
