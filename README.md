@@ -1,5 +1,9 @@
 # Système de Détection d'Intrusions par Machine Learning
 
+<p align="center">
+  <img src="Système_de_Détection_d'Intrusi.png" alt="Schéma du projet de détection d'intrusion" width="700">
+</p>
+
 ## Contexte du projet
 
 Ce projet vise à développer un système de détection d'intrusions réseau en s'appuyant sur des techniques d'apprentissage automatique. Un système de détection d'intrusion (IDS) a pour objectif d'identifier des comportements anormaux ou malveillants au sein du trafic réseau. L'utilisation du machine learning permet d'apprendre à partir de données historiques de connexions réseau afin de classifier automatiquement de nouvelles connexions comme normales ou malveillantes (intrusion). Ce projet englobe la préparation des données, la construction d'un pipeline de classification supervisée, l'entraînement de plusieurs modèles de machine learning et l'évaluation de leurs performances pour identifier les modèles les plus efficaces et robustes pour la détection d'intrusions.
