@@ -1,7 +1,7 @@
 # Système de Détection d'Intrusions par Machine Learning
 
 <p align="center">
-  <img src="Système_de_Détection_d'Intrusi.png" alt="Schéma du projet de détection d'intrusion" width="700">
+  <img src="Intrusi.png" alt="Schéma du projet de détection d'intrusion" width="700">
 </p>
 
 ## Contexte du projet
